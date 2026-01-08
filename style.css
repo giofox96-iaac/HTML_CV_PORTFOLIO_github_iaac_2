@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+}
+
+.cover-image {
+    width: 100%;
+    height: 300px;
+    background-image: url('Pictures/COVER.jpeg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    object-fit: cover;
+}
+
+.name-section {
+    margin-left: 368px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #4a90e2;
+}
+
+h2 {
+    margin: 10px 0 0 0;
+    font-size: 1.5em;
+    color: #666666;
+    font-weight: 400;
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-top: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 80px auto 0 auto;
+    padding: 20px;
+}
+
+.left {
+    width: 250px;
+    padding-right: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.right {
+    flex: 1;
+    padding-left: 20px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+section {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+section h3 {
+    color: #4a90e2;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section li {
+    margin-bottom: 8px;
+}
+
+section a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+.projects {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.projects h2 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    color: #666666;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.project-text {
+    padding-left: 20px;
+}
+
+.project-card h4 {
+    margin: 0 0 10px 0;
+    color: #333333;
+}
+
+.project-card p {
+    margin: 0 0 10px 0;
+    color: #666666;
+}
+
+.project-link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-pic {
+        position: static;
+        margin: 0 auto;
+    }
+    .name-section {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 5px 0;
+    }
+    main {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .left, .right {
+        width: 100%;
+        padding: 0;
+    }
+    .left {
+        margin-bottom: 20px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        flex-direction: column;
+    }
+    .project-image {
+        width: 100%;
+        height: 150px;
+    }
+    .project-text {
+        padding-left: 0;
+        padding-top: 15px;
+    }
+}
